@@ -1,0 +1,2 @@
+class Fountain < ApplicationRecord
+end

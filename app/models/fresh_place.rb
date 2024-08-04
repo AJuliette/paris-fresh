@@ -1,0 +1,2 @@
+class FreshPlace < ApplicationRecord
+end
