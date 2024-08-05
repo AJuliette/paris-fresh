@@ -10,16 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_04_235639) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_05_080757) do
   create_table "fountains", force: :cascade do |t|
     t.integer "open_data_identifier"
     t.boolean "working"
     t.string "street_number"
     t.string "street_name"
-    t.string "neighborhood"
-    t.integer "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "neighborhood_id", null: false
+    t.string "model"
+    t.string "name"
+    t.string "neighborhood_number"
+    t.index ["neighborhood_id"], name: "index_fountains_on_neighborhood_id"
   end
 
   create_table "fresh_places", force: :cascade do |t|

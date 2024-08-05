@@ -1,0 +1,21 @@
+<h3 class="centered-text">Fontaines à boire</h3>
+
+<div class="container">
+    <div class="flex-container">
+        <% fountains.each do |fountain| %>
+            <% if fountain.working? %>
+                <div class="card">
+                    <div class="card-content">
+                        <p class="emoji">🚰</p>
+                        <h3><%= fountain.name %></h3>
+                        <div class="subtitle"><span><%= fountain.street_number %> <%= fountain.street_name %></span></div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-details-inner">
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+</div>
