@@ -6,13 +6,13 @@ class ImportFreshPlacesJob
   def perform
     file = File.read('tmp/ilots-de-fraicheur-equipements-activites.json')
     data = JSON.parse(file)
-    puts data
 
     data.map do |fresh_place_hash|
       fresh_place = FreshPlace.find_or_initialize_by(open_data_identifier: fresh_place_hash["identifiant"])
       fresh_place.name = fresh_place_hash["nom"]
-      fresh_place.neighborhood = fresh_place_hash["arrondissement"]
+      fresh_place.neighborhood_number = fresh_place_hash["arrondissement"]
       fresh_place.street_address = fresh_place_hash["adresse"]
+      fresh_place.neighborhood_id = Neighborhood.find_by(number: fresh_place.neighborhood_number).id
       fresh_place.free = case fresh_place_hash["payant"]
                           when "Oui" then false
                           when "Non" then true
@@ -31,7 +31,7 @@ class ImportFreshPlacesJob
                           when "Ombrière temporaire" then :temporary_shade_structure
                           when "Découverte et Initiation" then :discovery_and_initiation
                           end
-      fresh_place.save
+      fresh_place.save!
     end
   end
 end

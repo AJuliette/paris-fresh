@@ -1,6 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @fresh_places_75001 = FreshPlace.where(neighborhood: "75001")
-    @fresh_places_75002 = FreshPlace.where(neighborhood: "75002")
+    @neighborhoods = Neighborhood.includes(:fresh_places).order(:number)
   end
 end

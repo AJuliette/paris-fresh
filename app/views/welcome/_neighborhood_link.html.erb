@@ -3,13 +3,13 @@
         <% fresh_places.each do |fresh_place| %>
             <div class="card">
                 <div class="card-content">
-                    <p class="emoji"><%= type_to_emoji(fresh_place.place_type) %></p>
-                    <h3><%= fresh_place.name %></h3>
-                    <div class="subtitle"><%= fresh_place.street_address %></div>
+                    <h2><%= fresh_place.neighborhood %></h3>
                 </div>
                 <div class="card-details">
                     <div class="card-details-inner">
-                    Gratuit: <%= boolean_to_text(fresh_place.free) %>
+                        <div class="read-more">
+                            <a class="button" href="https://en.wikivoyage.org/wiki/Chicago">Read Article</a>
+                        </div>
                     </div>
                 </div>
             </div>

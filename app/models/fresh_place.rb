@@ -1,4 +1,6 @@
 class FreshPlace < ApplicationRecord
+  belongs_to :neighborhood
+
   enum :place_type, [
     :outdoor_swimming,
     :misting_device,
