@@ -5,5 +5,7 @@ class NeighborhoodsController < ApplicationController
 
   def show
     @neighborhood = Neighborhood.find(params[:id])
+
+    @fresh_places = @neighborhood.fresh_places.order(:place_type)
   end
 end
