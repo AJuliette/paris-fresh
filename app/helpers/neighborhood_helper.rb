@@ -1,4 +1,4 @@
-module WelcomeHelper
+module NeighborhoodHelper
   def boolean_to_text(value)
     value ? "Oui" : "Non"
   end

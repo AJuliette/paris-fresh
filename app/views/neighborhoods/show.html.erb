@@ -1,3 +1,8 @@
+<iframe src=<%="https://macarte.ign.fr/carte/#{@neighborhood.ign_map}/Paris-Fresh-#{@neighborhood.number}"%> width="100%" height="480px" allow="geolocation clipboard-read; clipboard-write">
+</iframe>
+
+<h2 class="centered-text"><%= @neighborhood.name%></h2>
+
 <%= render partial: "fresh_places/show_partial", locals: { fresh_places: @neighborhood.fresh_places } %>
 
 <div class="container">

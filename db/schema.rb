@@ -44,7 +44,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_05_080757) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "ign_map"
   end
 
+  add_foreign_key "fountains", "neighborhoods"
   add_foreign_key "fresh_places", "neighborhoods"
 end

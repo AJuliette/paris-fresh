@@ -9,8 +9,8 @@
 #   end
 
 neighborhoods = [
-{"arrondissement": "75001", "arrondissement_en_chiffre": "Premier Arrondissement"},
-{"arrondissement": "75002", "arrondissement_en_chiffre": "Second Arrondissement"},
+{"arrondissement": "75001", "arrondissement_en_chiffre": "Premier Arrondissement", "map_ign": "gpBXln"},
+{"arrondissement": "75002", "arrondissement_en_chiffre": "Second Arrondissement", "map_ign": "DFiXq2"},
 {"arrondissement": "75003", "arrondissement_en_chiffre": "Troisième Arrondissement"},
 {"arrondissement": "75004", "arrondissement_en_chiffre": "Quatrième Arrondissement"},
 {"arrondissement": "75005", "arrondissement_en_chiffre": "Cinquième Arrondissement"},
@@ -35,5 +35,6 @@ neighborhoods = [
 neighborhoods.each do |neighborhood_hash|
     neighborhood = Neighborhood.find_or_initialize_by(number: neighborhood_hash[:arrondissement])
     neighborhood.name = neighborhood_hash[:arrondissement_en_chiffre]
+    neighborhood.ign_map = neighborhood_hash[:map_ign]
     neighborhood.save
 end
