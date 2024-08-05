@@ -4,7 +4,7 @@ class ImportFreshPlacesJob
   include SuckerPunch::Job
 
   def perform
-    file = File.read('tmp/ilots-de-fraicheur-equipements-activites.json')
+    file = File.read('data/ilots_de_fraicheur_equipements_activites.json')
     data = JSON.parse(file)
 
     data.map do |fresh_place_hash|
