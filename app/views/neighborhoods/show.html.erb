@@ -1,0 +1,13 @@
+<%= render partial: "fresh_places/show_partial", locals: { fresh_places: @neighborhood.fresh_places } %>
+
+<div class="container">
+    <div class="flex-container">
+        <div class="card">
+            <div class="card-content-button">
+                <div class="read-more">
+                    <%= link_to "Retour en arrière", root_path, class: "button" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

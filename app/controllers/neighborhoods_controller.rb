@@ -1,5 +1,9 @@
 class NeighborhoodsController < ApplicationController
   def index
-    @neighborhoods = Neighborhood.includes(:fresh_places).order(:number)
+    @neighborhoods = Neighborhood.order(:number)
+  end
+
+  def show
+    @neighborhood = Neighborhood.find(params[:id])
   end
 end
