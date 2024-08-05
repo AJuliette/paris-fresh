@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_04_193528) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_04_205054) do
   create_table "fountains", force: :cascade do |t|
     t.integer "open_data_identifier"
     t.boolean "working"
@@ -26,11 +26,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_04_193528) do
     t.string "name"
     t.integer "neighborhood"
     t.string "street_address"
-    t.integer "open_data_identifier"
+    t.string "open_data_identifier"
     t.boolean "free"
-    t.integer "type"
+    t.integer "place_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "url"
   end
 
 end

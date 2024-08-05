@@ -4,9 +4,9 @@ class CreateFreshPlaces < ActiveRecord::Migration[7.1]
       t.string :name
       t.integer :neighborhood
       t.string :street_address
-      t.integer :open_data_identifier
+      t.string :open_data_identifier
       t.boolean :free
-      t.integer :type
+      t.integer :place_type
       t.timestamps
     end
   end
