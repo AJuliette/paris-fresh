@@ -1,0 +1,18 @@
+<h1>Les lieux où se rafraîchir à Paris par arrondissement</h1>
+<p>Regroupement des données de <%= link_to "Paris Open Data", "https://opendata.paris.fr/pages/home/", :target => "_blank" %> 
+:</p>
+<ul>
+<li>
+    <%= link_to "Ilots de fraîcheur - Equipements / Activités", "https://opendata.paris.fr/explore/dataset/ilots-de-fraicheur-equipements-activites", :target => "_blank" %>:
+    Les îlots de fraîcheur à Paris sont des lieux d’accueil, de halte et/ou de repos, accessibles au grand public et repérés comme source de rafraîchissement par rapport à leur environnement proche en période chaude ou caniculaire. 
+</li>
+</ul>
+
+<h2>Premier arrondissement</h2>
+
+<%= render partial: "place", locals: { fresh_places: @fresh_places_75001 } %>
+
+<h2>Second arrondissement</h2>
+
+<%= render partial: "place", locals: { fresh_places: @fresh_places_75002 } %>
+
