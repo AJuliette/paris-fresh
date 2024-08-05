@@ -1,23 +1,39 @@
 <h1>Les lieux où se rafraîchir à Paris par arrondissement</h1>
-<p>Regroupement des données de <%= link_to "Paris Open Data", "https://opendata.paris.fr/pages/home/", :target => "_blank" %> 
-:</p>
-<ul>
-<li>
-    <%= link_to "Ilots de fraîcheur - Equipements / Activités", "https://opendata.paris.fr/explore/dataset/ilots-de-fraicheur-equipements-activites", :target => "_blank" %>:
-    Les îlots de fraîcheur à Paris sont des lieux d’accueil, de halte et/ou de repos, accessibles au grand public et repérés comme source de rafraîchissement par rapport à leur environnement proche en période chaude ou caniculaire. 
-</li>
-</ul>
+
+<p>Ce site regroupe des données de <%= link_to "Paris Open Data", "https://opendata.paris.fr/pages/home/", :target => "_blank" %>.
+</p>
+<p>Pour l'instant ce sont les données <%= link_to "Ilots de fraîcheur - Equipements / Activités", "https://opendata.paris.fr/explore/dataset/ilots-de-fraicheur-equipements-activites", :target => "_blank" %> qui sont utilisées, mais d'autres sont à venir !</p>
+<p>Les îlots de fraîcheur à Paris sont des lieux d’accueil, de halte et/ou de repos, accessibles au grand public et repérés comme source de rafraîchissement par rapport à leur environnement proche en période chaude ou caniculaire.</p>
+
+<br/>
+
+<p>Pour trouver où te rafraîchir, clique sur l'arrondissement qui t'intéresse:</p>
+
+
+<div class="flex-container-centered">
+    <%= image_tag "paris_map", usemap: "#neighborhoodmap", class:"map" %>
+</div>
+
+<map name="neighborhoodmap">
+    <% coords_to_map.map do |k,v| %>
+        <area shape="circle" coords=<%=v%> href="neighborhoods/<%=k%>" alt="Page1">
+    <% end %>
+</map>
+
+<% if false %>
 
 <div class="container">
     <div class="flex-container">
         <% @neighborhoods.each do |neighborhood| %>
             <div class="card">
                 <div class="card-content-button">
-                    <div class="read-more">
-                        <%= link_to neighborhood.name, neighborhood, class: "button" %>
+                    <div class="read-more centered-text">
+                        <%= link_to neighborhood.name, neighborhood %>
                     </div>
                 </div>
             </div>
         <% end %>
     </div>
 </div>
+
+<% end %>

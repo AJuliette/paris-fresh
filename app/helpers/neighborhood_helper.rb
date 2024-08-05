@@ -19,4 +19,13 @@ module NeighborhoodHelper
     when "discovery_and_initiation" then "🔍"
     end
   end
+
+  def coords_to_map
+      [
+        ["1", "193,132,15"],
+        ["2", "212,115,15"],
+        ["3", "251,133,15"],
+        ["4", "253,161,15"]
+      ]
+  end
 end

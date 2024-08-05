@@ -149,3 +149,14 @@
 .centered-text {
   text-align: center;
 }
+
+.map{
+  height: 300px;
+}
+
+.flex-container-centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+}
