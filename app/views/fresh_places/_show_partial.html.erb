@@ -3,7 +3,7 @@
 
 <% FreshPlace.place_types.map do |place_type,v| %>
     <% if neighborhood_has_place_type?(@neighborhood, place_type) %>
-        <h3 class="centered-text"><%= place_type_translated(place_type) %></h3>
+        <h3 class="centered-text"><%= place_type_translated(place_type) %>:</h3>
         <div class="container">
             <div class="flex-container">
                 <% fresh_places_corresponding_to_place_type(fresh_places, place_type).each do |fresh_place| %>

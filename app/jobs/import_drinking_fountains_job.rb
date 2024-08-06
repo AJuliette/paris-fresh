@@ -11,7 +11,6 @@ class ImportDrinkingFountainsJob
       next if ["PANTIN","THIAIS","IVRY-SUR-SEINE","SAINT-OUEN", "BAGNEUX", "SAINT-MANDE", "SAINT-DENIS", "NOGENT-SUR-MARNE"].include? fountain_hash["commune"]
       fountain = Fountain.find_or_initialize_by(open_data_identifier: fountain_hash["gid"])
       fountain.name = fountain_hash["nom"]
-      fountain.neighborhood_number = fountain_hash["arrondissement"]
       fountain.street_name = fountain_hash["voie"]
       if fountain_hash["no_voirie_impair"].nil? 
         fountain.street_number = fountain_hash["no_voirie_pair"]
