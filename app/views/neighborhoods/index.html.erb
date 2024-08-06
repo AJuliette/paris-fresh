@@ -2,13 +2,17 @@
 
 <p>Ce site regroupe des données de <%= link_to "Paris Open Data", "https://opendata.paris.fr/pages/home/", :target => "_blank" %>.
 </p>
-<p>Pour l'instant ce sont les données <%= link_to "Ilots de fraîcheur - Equipements / Activités", "https://opendata.paris.fr/explore/dataset/ilots-de-fraicheur-equipements-activites", :target => "_blank" %> qui sont utilisées, mais d'autres sont à venir !</p>
-<p>Les îlots de fraîcheur à Paris sont des lieux d’accueil, de halte et/ou de repos, accessibles au grand public et repérés comme source de rafraîchissement par rapport à leur environnement proche en période chaude ou caniculaire.</p>
+<p>Sont utilisées comme données:</p>
+<ul>
+    <li>
+        <%= link_to "Ilots de fraîcheur - Equipements / Activités", "https://opendata.paris.fr/explore/dataset/ilots-de-fraicheur-equipements-activites", :target => "_blank" %> : les îlots de fraîcheur à Paris sont des lieux d’accueil, de halte et/ou de repos, accessibles au grand public et repérés comme source de rafraîchissement par rapport à leur environnement proche en période chaude ou caniculaire.</p>
+    </li>
+    <li>
+        <%= link_to "Fontaines à boire", "https://opendata.paris.fr/explore/dataset/fontaines-a-boire", :target => "_blank" %> : Il y a 1 200 points d’eau dans les rues, les parcs et les bois de Paris. Par praticité, nous avons sélectionné ceux du jeu de données qui avaient une adresse et pas juste des coordonnées latitude/longitude.</p>
+</ul>
 
-<br/>
-
+<br>
 <p>Pour trouver où te rafraîchir, clique sur l'arrondissement qui t'intéresse:</p>
-
 
 <div class="flex-container-centered">
     <%= image_tag "paris_map.png", usemap: "#neighborhoodmap", class:"map" %>
@@ -38,5 +42,5 @@
 
 <% end %>
 
-<p>Réalisé par <%= link_to "Juliette Audema", "https://www.linkedin.com/in/juliette-audema/" %>.
+<p>Réalisé par <%= link_to "Juliette Audema", "https://www.linkedin.com/in/juliette-audema/" %>. <%= link_to "Code Source.", "https://github.com/AJuliette/paris-fresh/" %>
 <p>Carte des arrondissements de <%= link_to "Freepik", "https://www.freepik.com/" %> ("Isometric paris city map infographics").
