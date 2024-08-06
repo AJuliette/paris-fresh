@@ -16,7 +16,7 @@
 
 <map name="neighborhoodmap">
     <% coords_to_map.map do |k,v| %>
-        <area shape="circle" coords=<%=v%> href="neighborhoods/<%=k%>" alt="Page1">
+        <area shape="circle" coords=<%=v%> href="neighborhoods/<%=k%>" alt="Arrondissement <%=k%>">
     <% end %>
 </map>
 
@@ -37,3 +37,6 @@
 </div>
 
 <% end %>
+
+<p>Réalisé par <%= link_to "Juliette Audema", "https://www.linkedin.com/in/juliette-audema/" %>.
+<p>Carte des arrondissements de <%= link_to "Freepik", "https://www.freepik.com/" %> ("Isometric paris city map infographics").
