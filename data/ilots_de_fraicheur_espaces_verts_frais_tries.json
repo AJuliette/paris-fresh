@@ -165,7 +165,8 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Jardin Serge Gainsbourg place du Maquis du Vercors",
+    "nom": "Jardin Serge Gainsbourg",
+    "adresse": "Place du Maquis du Vercors",
     "arrondissement": "75019",
     "geo_shape": {
       "type": "Feature",
@@ -262,7 +263,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Jardin Anna Marly 25 avenue de la porte de Vanves",
+    "nom": "Jardin Anna Marly",
+    "adresse": "13 Rue Julia Bartet",
+    "arrondissement": "75014",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -294,7 +297,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Jardin Rosa Luxemburg 63 ter rue Riquet",
+    "nom": "Jardin Rosa Luxemburg",
+    "adresse": "63 ter rue Riquet",
+    "arrondissement": "75018",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -628,7 +633,9 @@
   },
   {
     "proportion_vegetation_haute": null,
+    "nom": "Jardin Louis blanc",
     "adresse": "6 rue Louis Blanc",
+    "arrondissement": "75010",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -1662,7 +1669,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Jardin Hérold, 13 rue Francis Ponge",
+    "nom": "Jardin Hérold",
+    "adresse": "13 rue Francis Ponge",
+    "arrondissement": "75019",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -1694,7 +1703,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "28 rue Chanzy",
+    "nom": "Jardin de la Folie Titon",
+    "adresse": "30 rue Chanzy",
+    "arrondissement": "75011",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -1758,7 +1769,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Jardin Casque d’Or 39b rue des Haies",
+    "nom": "Jardin Casque d’Or",
+    "adresse": "14 rue Michel de Bourges",
+    "arrondissement": "75020",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -1790,7 +1803,9 @@
   },
   {
     "proportion_vegetation_haute": null,
+    "nom": "Square Alain Bashung",
     "adresse": "16 rue de Jéssaint",
+    "arrondissement": "75018",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -2344,7 +2359,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Jardin Françoise-Héritier place de la Garenne",
+    "nom": "Jardin Françoise-Héritier",
+    "adresse": "rue Raymond Losserand",
+    "arrondissement": "75014",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -2698,7 +2715,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Jardin du Moulin de la Vierge 20 rue de Gergovie",
+    "nom": "Jardin du Moulin de la Vierge",
+    "adresse": "20 rue de Gergovie",
+    "arrondissement": "75014",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -2826,7 +2845,9 @@
   },
   {
     "proportion_vegetation_haute": null,
+    "nom": "Jardin du Clos des Blancs Manteaux",
     "adresse": "21 rue des Blancs Manteaux",
+    "arrondissement": "75004",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -3212,7 +3233,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Jardin Ver Têtu, 2 rue Bernard tétu",
+    "nom": "Jardin du Ver Têtu",
+    "adresse": "22 rue Bernard tétu",
+    "arrondissement": "75019",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -3438,7 +3461,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Jardin Léon Zyguel 77 rue pixérécourt",
+    "nom": "Jardin Léon Zyguel",
+    "adresse": "77 rue pixérécourt",
+    "arrondissement": "75020",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -3726,7 +3751,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Maison des associations du 12e 181 avenue Daumesnil",
+    "nom": "Jardin de Reuilly - Paul-Pernin",
+    "adresse": "6 Rue Paul Dukas",
+    "arrondissement": "75012",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -3854,7 +3881,9 @@
   },
   {
     "proportion_vegetation_haute": null,
+    "nom": "Square Héloïse et Abélard",
     "adresse": "22 rue Pierre Gourdault",
+    "arrondissement": "75013",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -3918,7 +3947,9 @@
   },
   {
     "proportion_vegetation_haute": null,
+    "nom": "Jardin de la rue du Chalet",
     "adresse": "18 rue du Chalet",
+    "arrondissement": "75010",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -4314,7 +4345,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Jardin Léo Ferré 3 impasse Druinot",
+    "nom": "Square Léo Ferré",
+    "adresse": "39, rue de Cîteaux",
+    "arrondissement": "75012",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -4670,7 +4703,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Jardin Villemin 6 rue des Récollets",
+    "nom": "Jardin Villemin",
+    "adresse": "14 rue des Récollets",
+    "arrondissement": "75010",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -5186,7 +5221,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "Jardin Debergue-rendez-vous 1 Cité Debergue",
+    "nom": "Jardin Debergue - Rendez-Vous",
+    "adresse": "1 Cité Debergue",
+    "arrondissement": "75012",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -5316,7 +5353,9 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "adresse": "jardin des Deux Moulins 78 avenue Edison",
+    "nom": "Jardin des Deux Moulins",
+    "adresse": "78 avenue Edison",
+    "arrondissement": "75013",
     "geo_shape": {
       "type": "Feature",
       "geometry": {
@@ -5578,7 +5617,7 @@
   },
   {
     "proportion_vegetation_haute": null,
-    "nom": "Square Alexandre Luque",
+    "nom": "Square Alexandre Luquet",
     "adresse": "4 Rue du Transvaal",
     "arrondissement": "75020",
     "geo_shape": {

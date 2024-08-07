@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_07_122146) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_07_173540) do
   create_table "fountains", force: :cascade do |t|
     t.integer "open_data_identifier"
     t.boolean "working"
@@ -43,6 +43,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_07_122146) do
     t.index ["neighborhood_id"], name: "index_fresh_places_on_neighborhood_id"
   end
 
+  create_table "green_spaces", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "neighborhood_number"
+    t.integer "neighborhood_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["neighborhood_id"], name: "index_green_spaces_on_neighborhood_id"
+  end
+
   create_table "neighborhoods", force: :cascade do |t|
     t.integer "number"
     t.string "name"
@@ -53,4 +63,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_07_122146) do
 
   add_foreign_key "fountains", "neighborhoods"
   add_foreign_key "fresh_places", "neighborhoods"
+  add_foreign_key "green_spaces", "neighborhoods"
 end
