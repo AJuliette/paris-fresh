@@ -33,8 +33,14 @@
  }
 
  body {
-   margin: 1rem 1rem;
+   margin: 0;
  }
+
+@media screen and (minx-width: 375px) {
+  .body {
+    margin: 1rem 1rem;
+  }
+}
 
  a {
    color: $primary;
