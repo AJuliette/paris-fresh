@@ -8,7 +8,8 @@
         <%= link_to "Ilots de fraîcheur - Equipements / Activités", "https://opendata.paris.fr/explore/dataset/ilots-de-fraicheur-equipements-activites", :target => "_blank" %> : les îlots de fraîcheur à Paris sont des lieux d’accueil, de halte et/ou de repos, accessibles au grand public et repérés comme source de rafraîchissement par rapport à leur environnement proche en période chaude ou caniculaire.</p>
     </li>
     <li>
-        <%= link_to "Fontaines à boire", "https://opendata.paris.fr/explore/dataset/fontaines-a-boire", :target => "_blank" %> : Il y a 1 200 points d’eau dans les rues, les parcs et les bois de Paris. Par praticité, nous avons sélectionné ceux du jeu de données qui avaient une adresse et pas juste des coordonnées latitude/longitude.</p>
+        <%= link_to "Fontaines à boire", "https://opendata.paris.fr/explore/dataset/fontaines-a-boire", :target => "_blank" %> : Il y a 1 200 points d’eau dans les rues, les parcs et les bois de Paris. Par praticité, nous avons sélectionné ceux du jeu de données qui avaient une adresse et pas juste des coordonnées latitude/longitude.
+        Il existe déjà une <%= link_to "carte de tous les endroits où boire gratuitement de l'eau à Paris", "https://fontaine.eaudeparis.fr/", :target => "_blank" %>.
 </ul>
 
 <br>
@@ -19,8 +20,8 @@
 </div>
 
 <map name="neighborhoodmap">
-    <% coords_to_map.map do |k,v| %>
-        <area shape="circle" coords=<%=v%> href="neighborhoods/<%=k%>" alt="Arrondissement <%=k%>">
+    <% coords_to_map.map do |coord| %>
+        <area shape="circle" coords=<%=coord[:coords]%> href="neighborhoods/<%=coord[:number]%>" alt="<%=coord[:name]%>" title="<%=coord[:name]%>">
     <% end %>
 </map>
 
