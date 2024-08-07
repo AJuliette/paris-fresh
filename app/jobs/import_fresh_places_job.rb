@@ -12,6 +12,8 @@ class ImportFreshPlacesJob
       fresh_place.name = fresh_place_hash["nom"]
       fresh_place.neighborhood_number = fresh_place_hash["arrondissement"]
       fresh_place.street_address = fresh_place_hash["adresse"]
+      fresh_place.latitude = fresh_place_hash["geo_point_2d"]["lat"]
+      fresh_place.longitude = fresh_place_hash["geo_point_2d"]["lon"]
       fresh_place.neighborhood_id = Neighborhood.find_by(number: fresh_place.neighborhood_number).id
       fresh_place.free = case fresh_place_hash["payant"]
                           when "Oui" then false

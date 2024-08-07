@@ -8,6 +8,6 @@ class NeighborhoodsController < ApplicationController
 
     @fresh_places = @neighborhood.fresh_places.order(:place_type)
 
-    @fountains = Fountain.where(neighborhood: @neighborhood, working: true).where.not(street_number: nil)
+    @fountains = Fountain.working.with_address.where(neighborhood: @neighborhood)
   end
 end
