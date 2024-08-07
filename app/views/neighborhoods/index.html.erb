@@ -1,8 +1,32 @@
-<h1>Les lieux où se rafraîchir à Paris par arrondissement</h1>
+<section class="container centered-text">
+    <h1>Les lieux où se rafraîchir à Paris par arrondissement</h1>
+
+    <% if false %>
+        <%= image_tag "undraw_refreshing_beverage.png", height:"400px" %>
+        <br>
+    <% end %>
+</section>
+
+<p class="centered-text">Pour trouver où te rafraîchir, clique sur l'arrondissement qui t'intéresse (ou tu peux aussi utiliser les liens):</p>
+
+<div class="flex-container-map">
+    <%= image_tag "paris_map.png", usemap: "#neighborhoodmap", class:"map" %>
+    <ul>
+        <% @neighborhoods.each do |neighborhood| %>
+            <li><%= link_to neighborhood.name, neighborhood %></li>
+        <% end %>
+    </ul>
+</div>
+
+<map name="neighborhoodmap">
+    <% coords_to_map.map do |coord| %>
+        <area shape="circle" coords=<%=coord[:coords]%> href="neighborhoods/<%=coord[:number]%>" alt="<%=coord[:name]%>" title="<%=coord[:name]%>">
+    <% end %>
+</map>
 
 <p>Ce site regroupe des données de <%= link_to "Paris Open Data", "https://opendata.paris.fr/pages/home/", :target => "_blank" %>.
 </p>
-<p>Sont utilisées comme données:</p>
+<p>Les données utilisées:</p>
 <ul>
     <li>
         <%= link_to "Ilots de fraîcheur - Equipements / Activités", "https://opendata.paris.fr/explore/dataset/ilots-de-fraicheur-equipements-activites", :target => "_blank" %> : les îlots de fraîcheur à Paris sont des lieux d’accueil, de halte et/ou de repos, accessibles au grand public et repérés comme source de rafraîchissement par rapport à leur environnement proche en période chaude ou caniculaire.
@@ -16,37 +40,6 @@
         Il existe déjà une <%= link_to "carte de tous les endroits où boire gratuitement de l'eau à Paris", "https://fontaine.eaudeparis.fr/", :target => "_blank" %>.
     </li>
 </ul>
-
-<br>
-<p>Pour trouver où te rafraîchir, clique sur l'arrondissement qui t'intéresse:</p>
-
-<div class="flex-container-centered">
-    <%= image_tag "paris_map.png", usemap: "#neighborhoodmap", class:"map" %>
-</div>
-
-<map name="neighborhoodmap">
-    <% coords_to_map.map do |coord| %>
-        <area shape="circle" coords=<%=coord[:coords]%> href="neighborhoods/<%=coord[:number]%>" alt="<%=coord[:name]%>" title="<%=coord[:name]%>">
-    <% end %>
-</map>
-
-<% if false %>
-
-<div class="container">
-    <div class="flex-container">
-        <% @neighborhoods.each do |neighborhood| %>
-            <div class="card">
-                <div class="card-content-button">
-                    <div class="read-more centered-text">
-                        <%= link_to neighborhood.name, neighborhood %>
-                    </div>
-                </div>
-            </div>
-        <% end %>
-    </div>
-</div>
-
-<% end %>
 
 <p>Réalisé par <%= link_to "Juliette Audema", "https://www.linkedin.com/in/juliette-audema/" %>. <%= link_to "Code Source.", "https://github.com/AJuliette/paris-fresh/" %>
 <p>Carte des arrondissements de <%= link_to "Freepik", "https://www.freepik.com/" %> ("Isometric paris city map infographics").

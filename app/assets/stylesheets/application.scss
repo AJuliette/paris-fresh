@@ -92,9 +92,6 @@
    .card-content-title-only {
     padding: 30px 30px 30px;
    }
-   .card-content-button {
-    padding: 30px 30px 30px;
-  }
    .card-details {
      position: absolute;
      width: 100%;
@@ -153,13 +150,35 @@
   text-align: center;
 }
 
-.map{
+.map {
   height: 300px;
 }
 
-.flex-container-centered{
+.flex-container-centered {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem;
+  padding: 3rem;
+}
+
+.flex-container-map {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 0.5rem 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .flex-container-map {
+    padding: 0 20rem;
+  }
 }
