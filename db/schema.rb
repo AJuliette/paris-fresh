@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_05_111202) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_07_122146) do
   create_table "fountains", force: :cascade do |t|
     t.integer "open_data_identifier"
     t.boolean "working"
@@ -22,6 +22,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_05_111202) do
     t.string "model"
     t.string "name"
     t.string "neighborhood_number"
+    t.float "longitude"
+    t.float "latitude"
     t.index ["neighborhood_id"], name: "index_fountains_on_neighborhood_id"
   end
 
