@@ -6,6 +6,12 @@
     padding: 0 15px;
   }
 
+@media screen and (min-width: 800px) {
+    .flex-container {
+        display: flex;
+    }
+}
+
 .flex-container-centered {
     display: flex;
     align-items: center;
