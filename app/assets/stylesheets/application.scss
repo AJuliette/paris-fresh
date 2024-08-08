@@ -14,8 +14,10 @@
  *= require_self
  */
 
- $primary: #E76C67;
- $border: #efefef;
+@import 'variables';
+
+@import 'button';
+@import 'card';
 
  * {
    &::before,
@@ -33,12 +35,12 @@
  }
 
  body {
-   margin: 0;
+   margin: 1rem 1rem;
  }
 
-@media screen and (minx-width: 375px) {
+@media screen and (max-width: 375px) {
   .body {
-    margin: 1rem 1rem;
+    margin: 0;
   }
 }
 
@@ -48,143 +50,10 @@
    transition: all .3s ease;
  }
 
- .container {
-   max-width: 1050px;
-   margin: 0 auto;
-   padding: 0 15px;
- }
-
- @media screen and (min-width: 800px) {
-   .flex-container {
-     display: flex;
-     flex-wrap: wrap;
-   }
- }
-
- .card {
-   flex: 0 1 30%;
-   border: 1px solid $border;
-   margin: 15px 0;
-   box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
-   transition: all .3s ease;
-   position: relative;
-   &:hover {
-     box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.2);
-   }
-   h1 {
-     margin: 0;
-     font-size: 1.75rem;
-     line-height: 1.2;
-   }
-   p {
-     margin: 0 0 30px;
-     color: #666666;
-   }
-   .subtitle {
-     margin: 0 0 15px;
-     font-size: 1.25rem;
-     font-weight: 700;
-     color: $primary;
-   }
-   .card-image {
-     height: 200px;
-     background-size: cover;
-     background-position: center center;
-     background-repeat: no-repeat;
-   }
-   .card-content {
-     padding: 30px 30px 90px;
-   }
-   .card-content-title-only {
-    padding: 30px 30px 30px;
-   }
-   .card-details {
-     position: absolute;
-     width: 100%;
-     bottom: 0;
-     left: 0;
-   }
-   .card-details-inner {
-     border-top: 1px solid $border;
-     margin: 0 30px;
-     padding: 30px 0;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-   }
-   .options {
-     a {
-       color: #666666;
-       &:hover {
-         color: #222222;
-       }
-     }
-     .fa {
-       margin-right: .25rem;
-     }
-   }
- }
-
- @media screen and (min-width: 800px) {
-   .card {
-     margin: .5rem;
-   }
- }
-
- .button {
-   display: block;
-   font-size: 1rem;
-   background: $primary;
-   border: 1px solid $primary;
-   padding: 10px 15px;
-   color: white;
-   text-decoration: none;
-   font-weight: 700;
-   text-align: center;
-   &:hover,
-   &:focus {
-     background: darken($primary, 10%);
-     border: 1px solid darken($primary, 10%);
-   }
- }
-
-.emoji {
-  font-size: 1.6em;
-}
-
 .centered-text {
   text-align: center;
 }
 
 .map {
   height: 300px;
-}
-
-.flex-container-centered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-}
-
-.flex-container-map {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    margin: 0.5rem 0;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .flex-container-map {
-    padding: 0 20rem;
-  }
 }

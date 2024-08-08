@@ -1,0 +1,18 @@
+@import 'variables';
+
+.button {
+    display: block;
+    font-size: 1rem;
+    background: $primary;
+    border: 1px solid $primary;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    &:hover,
+    &:focus {
+      background: darken($primary, 10%);
+      border: 1px solid darken($primary, 10%);
+    }
+}

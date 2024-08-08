@@ -1,0 +1,46 @@
+@import 'variables';
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+.flex-container-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+  }
+  
+.flex-container-map {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin: 0.5rem 0;
+    }
+    }
+
+.flex-container-map {
+    padding: 0;
+}
+
+@media screen and (min-width: 1400px) {
+    .flex-container-map {
+        padding: 0 10rem;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .flex-container-map {
+        padding: 0 20rem;
+    }
+}
