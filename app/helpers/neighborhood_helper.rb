@@ -39,7 +39,7 @@ module NeighborhoodHelper
         { "number": "75015", "coords": "101,200,30", "name": "Quinzième arrondissement"},
         { "number": "75016", "coords": "72,128,25", "name": "Seizième arrondissement"},
         { "number": "75017", "coords": "138,50,35", "name": "Dix-Septième arrondissement"},
-        { "number": "75018", "coords": "226,36,35", "name": "Dixhuitième arrondissement"},
+        { "number": "75018", "coords": "226,36,35", "name": "Dix-Huitième arrondissement"},
         { "number": "75019", "coords": "306,56,30", "name": "Dix-Neuvième arrondissement"},
         { "number": "75020", "coords": "339,130,30", "name": "Vingtième arrondissement"}
       ]
