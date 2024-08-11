@@ -8,15 +8,15 @@
             <div class="flex-container">
                 <% fresh_places_corresponding_to_place_type(fresh_places, place_type).each do |fresh_place| %>
                     <div class="card">
-                        <div class="card-content">
-                            <p class="emoji"><%= type_to_emoji(fresh_place.place_type) %></p>
+                        <div class="card-content-title-only">
+                            <div class="card-top">
+                                <span class="emoji"><%= type_to_emoji(fresh_place.place_type) %></span>
+                                <% if fresh_place.free? %>
+                                    <div class= "free-category">Gratuit</div>
+                                <% end %>
+                            </div>
                             <h3><%= fresh_place.name %></h3>
                             <div class="subtitle"><%= fresh_place.street_address %></div>
-                        </div>
-                        <div class="card-details">
-                            <div class="card-details-inner">
-                            Gratuit: <%= boolean_to_text(fresh_place.free) %>
-                            </div>
                         </div>
                     </div>
                 <% end %>
@@ -24,4 +24,3 @@
         </div>
     <% end %>
 <% end %>
-

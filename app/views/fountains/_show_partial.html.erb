@@ -6,7 +6,10 @@
             <% if fountain.working? %>
                 <div class="card">
                     <div class="card-content-title-only">
-                        <p class="emoji">🚰</p>
+                        <div class="card-top">
+                            <span class="emoji">🚰</span>
+                            <div class= "free-category">Gratuit</div>
+                        </div>
                         <h3><%= fountain.name %></h3>
                         <div class="subtitle"><span><%= fountain.street_number %> <%= fountain.street_name %></span></div>
                     </div>
