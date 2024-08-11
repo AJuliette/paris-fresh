@@ -10,9 +10,24 @@
     text-decoration: none;
     font-weight: 700;
     text-align: center;
+    border-radius: 1rem;
     &:hover,
     &:focus {
       background: darken($primary, 10%);
       border: 1px solid darken($primary, 10%);
     }
+}
+
+.free-category {
+  display: inline-block;
+  font-size: 1rem;
+  border: 1px solid;
+  padding: 10px 15px;
+  background-color: $success;
+  $border-color: $success-contrast;
+  color: $success-contrast;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: center;
 }

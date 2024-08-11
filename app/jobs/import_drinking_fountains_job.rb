@@ -12,6 +12,8 @@ class ImportDrinkingFountainsJob
       fountain = Fountain.find_or_initialize_by(open_data_identifier: fountain_hash["gid"])
       fountain.name = fountain_hash["nom"]
       fountain.street_name = fountain_hash["voie"]
+      fountain.latitude = fountain_hash["geo_point_2d"]["lat"]
+      fountain.longitude = fountain_hash["geo_point_2d"]["lon"]
       if fountain_hash["no_voirie_impair"].nil? 
         fountain.street_number = fountain_hash["no_voirie_pair"]
       else

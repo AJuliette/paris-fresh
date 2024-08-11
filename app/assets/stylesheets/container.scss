@@ -40,14 +40,18 @@
     padding: 0;
 }
 
-@media screen and (min-width: 1400px) {
-    .flex-container-map {
-        padding: 0 10rem;
-    }
-}
+.container-title {
+    border-radius: 1rem;
+    background-color: #4587EE;
+    align-items: center;
+    max-width: 800px;
+    height: 300px;
+    padding: 1rem;
 
-@media screen and (min-width: 1600px) {
-    .flex-container-map {
-        padding: 0 20rem;
+    h1 {
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 4rem;
+        padding: 3rem 0;
     }
 }

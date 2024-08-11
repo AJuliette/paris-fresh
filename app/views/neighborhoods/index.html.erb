@@ -1,22 +1,22 @@
 <section class="container centered-text">
-    <h1>Les lieux où se rafraîchir à Paris par arrondissement</h1>
-
-    <% if false %>
         <%= image_tag "undraw_refreshing_beverage.png", height:"400px" %>
         <br>
-    <% end %>
 </section>
+
+<div class="flex-container-map">
+    <div class="container-title">
+        <h1>Les lieux où se rafraîchir à Paris par arrondissement</h1>
+    </div>
+    <%= image_tag "paris_map.png", usemap: "#neighborhoodmap", class:"map" %>
+</div>
 
 <p class="centered-text">Pour trouver où te rafraîchir, clique sur l'arrondissement qui t'intéresse (ou tu peux aussi utiliser les liens):</p>
 
-<div class="flex-container-map">
-    <%= image_tag "paris_map.png", usemap: "#neighborhoodmap", class:"map" %>
-    <ul>
-        <% @neighborhoods.each do |neighborhood| %>
-            <li><%= link_to neighborhood.name, neighborhood_path(neighborhood.number) %></li>
-        <% end %>
-    </ul>
-</div>
+<ul>
+    <% @neighborhoods.each do |neighborhood| %>
+        <li><%= link_to neighborhood.name, neighborhood_path(neighborhood.number) %></li>
+    <% end %>
+</ul>
 
 <map name="neighborhoodmap">
     <% coords_to_map.map do |coord| %>

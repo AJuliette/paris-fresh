@@ -33,6 +33,12 @@ class ImportFreshPlacesJob
                           when "Ombrière temporaire" then :temporary_shade_structure
                           when "Découverte et Initiation" then :discovery_and_initiation
                           end
+      
+      if fresh_place.new_record?
+        print "NEW RECORD"
+        print fresh_place
+      end
+
       fresh_place.save!
     end
   end

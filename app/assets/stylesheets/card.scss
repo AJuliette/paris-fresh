@@ -34,6 +34,12 @@
       background-position: center center;
       background-repeat: no-repeat;
     }
+    .card-top {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
     .card-content {
       padding: 30px 30px 90px;
     }
@@ -66,6 +72,8 @@
       }
     }   
 }
+
+
  
 @media screen and (min-width: 800px) {
     .card {

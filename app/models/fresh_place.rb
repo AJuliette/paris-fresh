@@ -1,4 +1,6 @@
 class FreshPlace < ApplicationRecord
+  scope :filter_by_place_type, -> (place_type) { where place_type: place_type }
+
   belongs_to :neighborhood
 
   enum :place_type, [
