@@ -1,6 +1,9 @@
 class NeighborhoodsController < ApplicationController
   def index
     @neighborhoods = Neighborhood.order(:number)
+    @data_stacked = FreshPlace.includes(:neighborhood).all
+            .group_by(&:place_type)
+            .map { |place_type, fresh_places| {"name" => helpers.place_type_translated(place_type), "data" => fresh_places.map { |fresh_place| "#{fresh_place.neighborhood.number}"}.tally.map {|neighborhood_number,occurences| [neighborhood_number, occurences] }}}
   end
 
   def show
