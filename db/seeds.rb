@@ -25,8 +25,8 @@ neighborhoods = [
 {"arrondissement": "75014", "arrondissement_en_chiffre": "Quatorzième Arrondissement", "map_ign": "FkMgwP"},
 {"arrondissement": "75015", "arrondissement_en_chiffre": "Quinzième Arrondissement", "map_ign": "OGtLmD"},
 {"arrondissement": "75016", "arrondissement_en_chiffre": "Seizième Arrondissement", "map_ign": "mjavbr"},
-{"arrondissement": "75017", "arrondissement_en_chiffre": "Dix-Septième Arrondissement"},
-{"arrondissement": "75018", "arrondissement_en_chiffre": "Dix-Huitième Arrondissement"},
+{"arrondissement": "75017", "arrondissement_en_chiffre": "Dix-Septième Arrondissement", "map_ign": "rk4Moc"},
+{"arrondissement": "75018", "arrondissement_en_chiffre": "Dix-Huitième Arrondissement", "map_ign": "GA8AfL"},
 {"arrondissement": "75019", "arrondissement_en_chiffre": "Dix-Neuvième Arrondissement"},
 {"arrondissement": "75020", "arrondissement_en_chiffre": "Vingtième Arrondissement"},
 
