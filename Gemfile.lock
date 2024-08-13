@@ -89,6 +89,7 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     chartkick (5.0.7)
+    choice (0.2.0)
     coderay (1.1.3)
     concurrent-ruby (1.3.3)
     connection_pool (2.4.1)
@@ -207,6 +208,11 @@ GEM
       activesupport (>= 5.0.0)
       minitest
       nokogiri (>= 1.6)
+    rails-erd (1.7.2)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      choice (~> 0.2.0)
+      ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
@@ -226,6 +232,8 @@ GEM
       io-console (~> 0.5)
     rexml (3.3.4)
       strscan
+    ruby-graphviz (1.2.5)
+      rexml
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -306,6 +314,7 @@ DEPENDENCIES
   pry-rails
   puma (>= 5.0)
   rails (~> 7.2, >= 7.2)
+  rails-erd
   sassc-rails
   selenium-webdriver
   sprockets-rails

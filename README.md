@@ -21,3 +21,7 @@ You know the drill (I guess ?)
 `rails db:seed`
 
 I have different jobs to check and run under `app/jobs`. You need to open the rails console ( `rails c`) and perform the jobs like this: `ImportFreshPlacesJob.perform_async`.
+
+Domain model:
+
+![](./domain_model.png)
